@@ -133,7 +133,7 @@ AddEventHandler("playerConnecting", function(name, setReason)
 end)
 
 function getAccountAge(hexId, callback)
-    local apiKey = "766D5415D35F70B5C2424992A89BB8DA"
+    local apiKey = "INSERT STEAM API KEY"
     
     if not hexId then callback(false) return end
     local comId = tonumber(string.sub(hexId, 7), 16)
@@ -164,7 +164,7 @@ function BanCheater(reason,source)
 	table.insert(bantable["Anticheat"], newban)
 	saveData(bantable, "bans.txt", path.bans)
 	log("bans", GetPlayerName(source).." | "..identifier.." | "..license.." | Forever | "..reason.." | Anti-Cheat")
-			PerformHttpRequest('https://discordapp.com/api/webhooks/349782217876307995/HHDbcJB7kSrodALSRRpo4pLio2763hEGlOBSW4_KyuqvXbsg6lDcyUQJa03bn_L4ZAHj', function(err, text, headers) end, 'POST', json.encode(
+			PerformHttpRequest('DISCORD WEBHOOK', function(err, text, headers) end, 'POST', json.encode(
 			{
 				username = "Ban Bot (Anticheat)",
 	    		embeds = {
@@ -221,7 +221,7 @@ function BanUser(target,time,reason,source)
 			table.insert(bantable["Normal"], newban)
 			saveData(bantable, "bans.txt", path.bans)
 			log("bans", GetPlayerName(target).." | "..identifier.." | "..license.." | "..bantime.." | "..reason.." | "..GetPlayerName(tonumber(source)))
-			PerformHttpRequest('https://discordapp.com/api/webhooks/349782217876307995/HHDbcJB7kSrodALSRRpo4pLio2763hEGlOBSW4_KyuqvXbsg6lDcyUQJa03bn_L4ZAHj', function(err, text, headers) end, 'POST', json.encode(
+			PerformHttpRequest('DISCORD WEBHOOK', function(err, text, headers) end, 'POST', json.encode(
 			{
 				username = "Ban Bot",
 	    		embeds = {
@@ -283,7 +283,7 @@ function BanUserConsole(target,time,reason,banner)
 			table.insert(bantable["Normal"], newban)
 			saveData(bantable, "bans.txt", path.bans)
 			log("bans", GetPlayerName(target).." | "..identifier.." | "..license.." | "..bantime.." | "..reason.." | "..banner)
-			PerformHttpRequest('https://discordapp.com/api/webhooks/349782217876307995/HHDbcJB7kSrodALSRRpo4pLio2763hEGlOBSW4_KyuqvXbsg6lDcyUQJa03bn_L4ZAHj', function(err, text, headers) end, 'POST', json.encode(
+			PerformHttpRequest('DISCORD WEBHOOK', function(err, text, headers) end, 'POST', json.encode(
 			{
 				username = "Ban Bot",
 	    		embeds = {
@@ -320,7 +320,7 @@ function KickUser(target,reason,source)
 	local license = getID("license", target)
 	if identifier ~= nil then
 		if license ~= nil then
-			PerformHttpRequest('https://discordapp.com/api/webhooks/349782217876307995/HHDbcJB7kSrodALSRRpo4pLio2763hEGlOBSW4_KyuqvXbsg6lDcyUQJa03bn_L4ZAHj', function(err, text, headers) end, 'POST', json.encode(
+			PerformHttpRequest('DISCORD WEBHOOK', function(err, text, headers) end, 'POST', json.encode(
 			{
 				username = "Kick Bot",
 	    		embeds = {
@@ -355,7 +355,7 @@ function KickUserConsole(target,reason,kicker)
 	local license = getID("license", target)
 	if identifier ~= nil then
 		if license ~= nil then
-			PerformHttpRequest('https://discordapp.com/api/webhooks/349782217876307995/HHDbcJB7kSrodALSRRpo4pLio2763hEGlOBSW4_KyuqvXbsg6lDcyUQJa03bn_L4ZAHj', function(err, text, headers) end, 'POST', json.encode(
+			PerformHttpRequest('DISCORD WEBHOOK', function(err, text, headers) end, 'POST', json.encode(
 			{
 				username = "Kick Bot",
 	    		embeds = {
