@@ -1,0 +1,72 @@
+    <head>
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <center>
+        <img id="logo" src="logo.png"></img>
+        <div class="Form-Container">
+            <div class="Form-Password">
+                <form id="login-form">
+                    <input id="password" type="password" placeholder="Password"><br>
+                    <button id="submit" type="submit">Log In</button>
+                </form>
+            </div>
+            <div class="Form-CChoose">
+                <div class="dialog1">
+                    <form id="Char1">
+                        <p id="char1name">Name: </p>
+                        <p id="char1dob">DOB: </p>
+                        <p id="char1gen">Gender: </p>
+                        <p id="char1height">Height: </p>
+                        <button id="submit" type="submit">Choose Character</button>
+                    </form>
+                    <button id="editc1">Edit Character</button>
+                    <button id="wipec1">Wipe Character</button>
+                </div>
+                <div class="dialog2">
+                    <form id="Char2">
+                        <p id="char2name">Name: </p>
+                        <p id="char2dob">DOB: </p>
+                        <p id="char2gen">Gender: </p>
+                        <p id="char2height">Height: </p>
+                        <button id="submit2" type="submit">Choose Character</button>
+                    </form>
+                    <button id="editc2">Edit Character</button>
+                    <button id="wipec2">Wipe Character</button>
+                </div>
+                <div class="dialog3">
+                    <form id="Char3">
+                        <p id="char3name">Name: </p>
+                        <p id="char3dob">DOB: </p>
+                        <p id="char3gen">Gender: </p>
+                        <p id="char3height">Height: </p>
+                        <button id="submit3" type="submit">Choose Character</button>
+                    </form>
+                    <button id="editc3">Edit Character</button>
+                    <button id="wipec3">Wipe Character</button>
+                </div>
+
+            </div>
+            <div class="Form-CCreate">
+                <form id="CC-form">
+                    <p>ATTENTION<br>You will not be able to edit any of this data later. Please ensure it is correct.</p>
+                    <input id="first_name" type="text" placeholder="First Name" required pattern="^[a-zA-Z][a-zA-Z-_\.]{1,20}$"><br>
+                    <input id="last_name" type="text" placeholder="Last Name" required pattern="^[a-zA-Z][a-zA-Z-_\.]{1,20}$"><br>
+                    <input id="dob" type="text" placeholder="MM/DD/YYYY" required pattern="(0[1-9]|1[012])\/(0[1-9]|1[0-9]|2[0-9]|3[01])\/[0-9]{4}"><br>
+                    <div class=slider>
+                        <input id='height' type=number placeholder="Enter your height in CM" min=69 max=300 step=1 required>
+                    </div>
+                    <input id ="gen" type="radio" name="gender"  value="male" checked><font color="white"> Male
+                    <input id ="gen2" type="radio" name="gender" value="female"> Female<br>
+                    <p>Please click the blue button once!</p>
+                    <button id="submit" type="submit">Create Character</button>
+                <form>
+            </div>
+        </div>
+        </center>
+        
+        <script src="script.js" type="text/javascript"></script>
+    </body>
+</html>

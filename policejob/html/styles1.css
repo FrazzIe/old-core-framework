@@ -1,0 +1,361 @@
+.console {
+  background-color: rgba(255,86,60,0.3);
+  width: 500px;
+  min-height: 30px;
+  color: white;
+  position: absolute;
+  top: 5px;
+  left: 200px;
+}
+html {
+  overflow: hidden;
+}
+@font-face {
+  font-family: pcdown;
+  src: url(pdown.ttf);
+}
+
+.sans {
+  font-family: 'Open Sans', sans-serif;
+}
+h1,h2,h3,h4 {
+  margin: 0;
+  padding: 0;
+}
+.green {
+  color: rgb(0, 125, 0);
+  font-weight: 700;
+  margin-right: 6px;
+}
+.red {
+  color: rgb(255, 0, 0);
+}
+#pre {
+  font-size: 0.8rem;
+  margin-right: 5px;
+}
+.full-screen {
+  width: 100%;
+  height:100%;
+  display: flex;
+  align-items: center;
+}
+.warrants-container {
+  background-image: url("nui://policejob/html/background.png");
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  width: 70%;
+  height: 70%;
+  border-radius: 10px;
+  opacity: 1;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  display: none;
+  z-index: 9999999;
+}
+.body {
+  width: 100%;
+  height: 600px;
+  padding-top: 8%;
+  display: none;
+}
+.history-container {
+  padding-top: 2%;  
+}
+.mdt-container {
+  padding-top: 2%;  
+}
+.newWarrant-container {
+  padding-top: 2%;
+}
+
+.newMDT-container {
+  padding-top: 2%;
+}
+.centered {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  width: 80%;
+  height: 65%;
+  margin-left: 115px;
+  margin-right: auto;
+}
+
+.centered2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  width: 80%;
+  height: 65%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button {
+  flex-grow: 1;
+  align-items: center;
+  text-align: center;
+  margin-left: 55px;
+  width: 10%;
+  height: 50px;
+  padding-top: 10px;
+  opacity: 0.65;
+  background: #4c4c4c;
+  background-image: linear-gradient(to bottom, #4c4c4c, #131313);
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+.button:focus, .submit {outline:0;}
+
+.number-display {
+  flex-grow: 0.4;
+  align-items: center;
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 40px;
+  width: 100%;
+  height: 6%;
+  background: #017ebc;
+  background-image: linear-gradient(to bottom, #f4f5f5, #dfdddd);
+  border-radius: 4px;
+  color: #777;
+  font-size: 1.2em;
+  margin-left: 65px;
+}
+.mdt-view {
+  margin-top: -75px;
+  margin-bottom: 0px;
+  margin-left: 50px;
+
+  width: 80%;
+}
+.btnGreen {
+  background: rgb(0, 125, 0);
+}
+.btnRed {
+  background: rgb(255, 0, 0);
+}
+.number-display p {
+  margin: 0;
+  padding: 0;
+}
+input[type=text], input[type=number], select, textarea {
+  width: 100%;
+  padding: 3% 2% 2% 3%;
+  font-size: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 40px;
+  opacity: 0.65;
+  resize: vertical;
+}
+input[type=submit], .submit {
+  height: 70px;
+  text-align: center;
+  width: 30%;
+  background: #017ebc;
+  opacity: 0.65;
+  background-image: linear-gradient(to bottom, #017ebc, #005285);
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 1.2em;
+
+  text-decoration: none;
+  border: none;
+}
+.form {
+  max-width: 74%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+.lstWarrants {
+  flex-grow: 0.4;
+  align-items: center;
+  text-align: center;
+  width: 97%;
+  height: 50%;
+  color: black;
+  opacity: 0.55;
+  font-size: 0.7em;
+  padding: 3% 1% 1% 3%;
+  text-decoration: none;
+  background: rgba(255, 255, 255, .9);
+  overflow-y: auto;  
+  overflow-x: hidden; 
+  list-style-type: none;
+  font-family: 'Open Sans', sans-serif;
+}
+.lstWarrants li { 
+  padding-top: 0.5em;
+  font-size: 1.5em;
+  white-space: nowrap;   
+  overflow: hidden;  
+  text-overflow: ellipsis;
+}  
+.lstWarrants li .name {
+  text-transform: uppercase;
+  font-weight: bold;
+  display:inline; 
+}  
+.lstWarrants li .notes {
+  display:inline; 
+}
+
+.wheaders {
+  flex-grow: 0.4;
+  align-items: center;
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 40px;
+  width: 100%;
+  height: 6%;
+  border-radius: 4px;
+  color: #777;
+  font-size: 1.2em;
+  margin-left: 65px;
+}
+
+.wheaders p {
+  margin: 0;
+  padding: 0;
+}
+
+.table-wrap {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;  
+  overflow-x: hidden;
+}
+
+.tblBtn {
+  padding: 1em;
+}
+
+.location {
+  text-transform: uppercase;
+}
+
+#warrant-notes {
+  width: 90%;
+  margin-left: 65px;
+}
+
+.lstMDT {
+  flex-grow: 0.4;
+  align-items: center;
+  text-align: center;
+  width: 97%;
+  height: 50%;
+  color: black;
+  opacity: 0.55;
+  font-size: 0.7em;
+  padding: 3% 1% 1% 3%;
+  text-decoration: none;
+  background: rgba(255, 255, 255, .9);
+  overflow-y: auto;  
+  overflow-x: hidden; 
+  list-style-type: none;
+  font-family: 'Open Sans', sans-serif;
+}
+.lstMDT li { 
+  padding-top: 0.5em;
+  font-size: 1.5em;
+  white-space: nowrap;   
+  overflow: hidden;  
+  text-overflow: ellipsis;
+}
+
+.lstMDT li .time {
+  display:inline;
+}
+
+.lstMDT li .officer {
+  display:inline;
+}
+
+.lstMDT li .offender {
+  display:inline;
+}
+
+.lstMDT li .charges {
+  display:inline;
+}
+
+.lstMDT li .jt {
+  display:inline;
+}
+
+.lstMDT li .finea {
+  display:inline;
+}
+
+.mdtboxes {
+  width:50%;
+  height: 40%;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 40px;
+  opacity: 0.8;
+  resize: vertical;
+}
+
+#newmdtclose {
+  margin-bottom: 200px;
+  margin-left: 500px;
+}
+#newmdthome {
+  margin-bottom: 10px;
+  margin-left: 500px;
+}
+
+#newmdtauto {
+  margin-bottom: 10px;
+  margin-left: 500px;
+}
+
+#submit2 {
+  margin-bottom: auto;
+  margin-left: 610px;
+}
+
+.mdtheaders {
+  flex-grow: 0.0;
+  align-items: center;
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 40px;
+  width: 100%;
+  height: 6%;
+  border-radius: 0px;
+  color: #777;
+  font-size: 1.2em;
+  margin-left: 65px;
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+
+.mdtheaders p {
+  margin: 0;
+  padding: 0;
+}
+
+#mdt-charges {
+  width: 100%;
+  margin-left: 65px;
+  margin-bottom: 0px;
+}
+
+.eee {
+  margin-top: -8px;
+}

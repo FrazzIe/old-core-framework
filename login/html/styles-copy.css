@@ -1,0 +1,219 @@
+@media screen and (max-width:1919px) {
+  .Form-Container {
+    width: 1920px;
+  }
+
+}
+
+body {
+    font-family: sans-serif;
+    overflow: hidden;   
+  display: none; 
+}
+
+#cursor {
+    position: absolute;
+    z-index: 999999;
+  display: none; 
+}
+
+#logo {
+    position: absolute;
+    top: 200px;
+    left: 800px;  
+}
+
+
+.dialog1 {
+    width: 300px;
+    position: absolute;
+    top: 324px;
+    left: 384px;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+}
+
+.dialog2 {
+    width: 300px;
+    position: absolute;
+    top: 334.8px;
+    left: 960px;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+}
+
+
+.dialog3 {
+    width: 300px;
+    position: absolute;
+    top: 324px;
+    left: 1536px;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+}
+
+.delete1 {
+    width: 300px;
+    position: absolute;
+    top: 540px;
+    left: 384px;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+}
+
+.delete2 {
+    width: 300px;
+    position: absolute;
+    top: 550.8px;
+    left: 960px;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+}
+
+.delete3 {
+    width: 300px;
+    position: absolute;
+    top: 540px;
+    left: 1536px;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+}
+
+.redtext {
+        color: white;
+}
+
+.Form-Container {
+    width: 1920px;
+    margin: 0;
+    display: none; 
+}
+
+.Form-Password {
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.Form-CChoose {
+  display: none; 
+}
+
+.Form-CCreate {
+    width: 300px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    border-radius: 15px;
+}
+
+p {
+    color: white;
+}
+
+#gen1
+{
+    height:200px;
+    font-family: sans-serif;
+}
+
+form {
+    margin: 0;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 10px;
+}
+
+button {
+    display: block;
+    margin-top: 5px;
+    padding: 10px;
+    background-color: #286090;
+    border: 0;
+    color: #fff;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.slider {
+  
+  input {
+    width: 100%;
+  }
+}
+
+%input-reset {
+  background: transparent;
+  border: none;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+input[type=number] {
+  @extend %input-reset;
+  background: #f5f5f5;
+  border-bottom: 2px solid #555;
+  padding: .7em;
+  width: 300px;
+  
+  &:hover,
+  &:focus,
+  .slider:hover & {
+    border-color: $color-primary;
+  }
+}
+
+input[type=range] {
+  @extend %input-reset;
+  -webkit-appearance: none;
+  cursor: pointer;
+  
+  &:focus {
+    outline: none;
+  }
+  
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: $color-primary;
+    cursor: -webkit-grab;
+    width: 3.0em;
+    height: 3.0em;
+    transition: all .2s;
+    opacity: 0;
+    
+    &:active {
+      box-shadow: 0 4px 16px rgba(0,0,0,.2);
+      cursor: -webkit-grabbing;
+      opacity: 1;
+    }
+    
+    .slider:hover &,
+    .slider [type=number]:focus + & {
+      opacity: 1;
+    }
+  }
+}
